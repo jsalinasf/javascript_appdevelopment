@@ -1,0 +1,1 @@
+document.getElementById("output").innerHTML = "<h1>Hello World! Welcome to Javascript</h1>";
