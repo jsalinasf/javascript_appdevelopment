@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SALINAS - Lab Exercise 01</title>
+    </head>
+    <body>
+        <div id="output"></div>
+        <script>
+            var properName01 = prompt("Input Proper Name 01: ");
+            var properName02 = prompt("Input Proper Name 02: ");
+            var verb01 = prompt("Input Verb 01 (past tense):");
+            var verb02 = prompt("Input Verb 02 (past tense):");
+            var verb03 = prompt("Input Verb 03 (past tense):");
+            var adjective01 = prompt("Input Adjective 01: ");
+            var adjective02 = prompt("Input Adjective 02: ");
+            var adjective03 = prompt("Input Adjective 03: ");
+
+            var out = "Once upon a time there were two friends. <br/>"
+            out += properName01 + " and " + properName02 + ". <br/>";
+            out += properName01 + " was " + adjective01 + ". <br/>";
+            out += properName02 + " was " + adjective02 + ". <br/>";
+
+            out += properName01 + " " + verb01 + ". <br/>";
+            out += properName02 + " " + verb02 + ". <br/>";
+            out += "But they never " + verb03 + " together. <br/>";
+            out += "Even though the world is " + adjective03 + ". <br/>";
+            document.getElementById("output").innerHTML = out;
+
+        </script>
+    </body>
+</html>
