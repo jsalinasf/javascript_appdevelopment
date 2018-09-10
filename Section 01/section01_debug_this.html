@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mad Lib</title>
+    </head>
+    <body>
+        <div id="out"></div>
+        <script>
+            var properName = prompt("Enter a proper name");
+            var verb = prompt("Enter a verb (past tense)");
+            var verb2 = prompt("Enter a second verb (past tense)");
+            var adj = prompt("Enter an adjective");
+            var adj2 = prompt("Enter another adjective");
+            var out = "Roses are Red. Violets are blue. <br/>";
+            out += properName + " left town without wearing a shoe. <br/>";
+            out += properName + " " + verb + ".<br/>";
+            out += "And " + properName + " " + verb2;
+            out += "<br/>But I am " + adj + " " + properName + " thought.<br/>";
+            out += "And kind of " + adj2 + " too!";
+            document.getElementById('out').innerHTML = out;
+            console.log(out)
+        </script>
+    </body>
+</html>
+
+<!--
+
+    Spotted Errors on Original Code
+    line 53: out gets reassigned # watch the "var" in front of "out"
+    line 53: Missing "+" sign to completely form the string
+    line 54: The property is "getelementByID" doesn't exist. It is "getelementById" # watch the capital "D"
+    line 54: The ID used on "getelementByID" doesnt correspond to the ID used on the DIV # out != output
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Mad Lib</title>
+        </head>
+        <body>
+            <div id="out"></div>
+            <script>
+                var properName = prompt("Enter a proper name");
+                var verb = prompt("Enter a verb (past tense)");
+                var verb2 = prompt("Enter a second verb (past tense)");
+                var adj = prompt("Enter an adjective");
+                var adj2 = prompt("Enter another adjective");
+                var out = "Roses are Red. Violets are blue. <br/>";
+                out += properName + " left town without wearing a shoe. <br/>";
+                out += properName + " " + verb + ".<br/>";
+                out += "And " + properName + " " + verb2;
+                out += "<br/>But I am " + adj + " " + properName + " thought.<br/>";
+                var out += "And kind of " + adj2 " too!";
+                document.getElementByID('output').innerHTML = out;
+            </script>
+        </body>
+    </html>
+
+
+-->
