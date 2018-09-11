@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MP3 Player</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+
+        <audio id="music">
+            <source src="song01.mp3" />
+        </audio>
+    
+        <!-- Start with the visual first -->
+        <button id="btnPlay">Play</button>
+        <button id="btnPause">Pause</button>
+        <button id="btnStop">Stop</button>
+        <input id="sldVolume" type="range" min="0" max="1" step=".01" value="0.5"/>
+        <div>
+            <ul id="songList" data-role="listview"></ul>
+        </div>
+
+        <script>
+            
+            var playButton = document.getElementById("btnPlay");
+            playButton.addEventListener("click", playMusic);
+
+            var pauseButton = document.getElementById("btnPause");
+            pauseButton.addEventListener("click", pauseMusic);
+
+            var stopButton = document.getElementById("btnStop");
+            stopButton.addEventListener("click",stopMusic);
+
+            var music = document.getElementById("music");
+
+            $(document).ready(function(){
+                $("#sldVolume").on("change", function(event){
+                    var value = event.target.value;
+                    music.volume = value;
+                })
+
+                var out= "";
+                urls = [];
+
+                $.getJSON("songs.json", function(data){
+                    $.each(data, function(key,val){
+                        out += makeCell(val.band, val.title, val.album);
+                        urls.push(val.url);
+                    });
+                    // console.log(out);
+                    document.getElementById("songList").innerHTML = out;
+                    $("#songList").listview().listview("refresh");
+                });
+
+                $("#songList").on("click", "li", function(){
+                    var newSong = $(this).index();
+                    var player = document.getElementById("music");
+                    player.pause();
+                    player.src = urls[newSong];
+                    player.play();
+                });
+
+            });
+
+            function makeCell(band, title, album)
+            {
+                var out = "<li><h2>" + title + " By: ";
+                out += band + "</h2>";
+                out += "<p>" + album + "</p></li>";
+                return(out);
+
+            }
+
+            function playMusic(e)
+            {
+                music.play();
+            }
+
+            function pauseMusic(e)
+            {
+                music.pause();
+            }
+
+            function stopMusic(e)
+            {
+                music.pause();
+                music.currentTime = 0;
+            }
+
+        </script>
+
+        <footer>
+            <p>For more awesome projects like this please visit: <a href="http://frameworktv.com" target="_blank">FrameworkTv.com</a></p>
+        </footer>
+    
+    </body>
+</html>

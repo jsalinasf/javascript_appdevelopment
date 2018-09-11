@@ -1,0 +1,30 @@
+[
+    {
+        "band": "Young MC, Michael L. Ross and Matt Dike",
+        "title": "Funky Cold Medina",
+        "album": "After Dark",
+        "url": "song01.mp3"
+    },
+
+    {
+        "band": "Vanilla Ice",
+        "title": "Greatest Hits",
+        "album": "91 RAP Baby",
+        "url": "song02.mp3"
+    },
+
+    {
+        "band": "Inc. Lips",
+        "title": "Old School",
+        "album": "Disco Greatest Hits",
+        "url": "song03.mp3"
+    },
+
+    {
+        "band": "Falco",
+        "title": "Rock me Amadeus",
+        "album": "Classic Rock Baby",
+        "url": "song04.mp3"
+    }
+
+]
