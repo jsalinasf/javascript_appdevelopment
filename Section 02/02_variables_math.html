@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript Variables</title>
+    </head>
+    <body>
+        <div id="output">
+            <script>
+                var salaryByWeek = 1350;
+
+                var infoToPrint = "";
+                
+                infoToPrint = "Weekly Salary: $" + salaryByWeek;
+                    infoToPrint += "<br />Monthly Salary: $" + salaryByWeek * 4;
+                
+                var salaryByYear = salaryByWeek * 52;
+                infoToPrint += "<br />Yearly Salary: $" + salaryByYear;
+
+
+                document.getElementById("output").innerHTML = infoToPrint;
+
+            </script>
+        </div>
+    </body>
+</html>

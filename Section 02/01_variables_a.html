@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript Variables</title>
+    </head>
+    <body>
+        <div id="output">
+            <script>
+                var age = 44; // integer positive
+                var status = -100; // integer negative
+                var gpa = 3.55; // floating point 
+
+                // Pay attention...
+                // in this exercise the variables are inside "quotes" so they ate just strings and not variables
+                // variable age is NOT the same as "age"
+
+                var out = "Age: " + age;
+                    out += "<br />Status: " + status;
+                    out += "<br />Gpa :" + gpa;
+                    // Pay ATTENTION here, see the difference between using age and "age"
+                    out += "<br />Age: " + "age";
+                    out += "<br />Status: " + "status";
+                    out += "<br />Gpa :" + "gpa";
+                
+                var fullName = "Student 01";
+
+                // I can concatenate string for the innerHTML
+                document.getElementById("output").innerHTML = fullName + "<br />" + out;
+
+            </script>
+        </div>
+    </body>
+</html>

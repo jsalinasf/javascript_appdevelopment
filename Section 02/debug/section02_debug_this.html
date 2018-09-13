@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Debug #2</title>
+    </head>
+    <body>
+        <div id="output"></div>
+        <script>
+            
+            var name = prompt("What is your name?");
+            var locationFriend = prompt("In which city or town do you live?");
+            var age = prompt("How old are you?");
+            var pets = prompt("Do you have any pets?");
+            var food = prompt("What is your favorite food?");
+
+            var out = "This is my friend " + name;
+                out += "<br />" + name + " lives in " + locationFriend;
+                out += "<br />" + name + " is " + age + " years old";
+                out += "<br />" + name + " likes to eat " + food;            
+            document.getElementById('output').innerHTML = out;
+        </script>
+        <footer>
+            <p>For more awesome projects like this please visit: <a href="http://frameworktv.com" target="_blank">FrameworkTv.com</a></p>
+        </footer>
+    </body>
+</html
