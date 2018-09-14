@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab #2</title>
+    </head>
+    <body>
+        <div id="userNumberDiv"></div>
+        <div id="AddNumber10Div"></div>
+        <div id="AddNumber20Div"></div>
+        <div id="AddNumber50Div"></div>
+        <div id="AddNumber1568Div"></div>
+        <script>
+            var totalSum = 0;
+            var userNumber = prompt("Input a number: ");
+            document.getElementById("userNumberDiv").innerHTML = "This your number: " + userNumber;
+            var addNumber01 = parseInt(userNumber);
+            totalSum = addNumber01 + 10;
+            document.getElementById("AddNumber10Div").innerHTML = "<br />I've added 10(ten) to your number: " + totalSum;
+            totalSum = addNumber01 + 20;
+            document.getElementById("AddNumber20Div").innerHTML = "<br />I've added 20(twenty) to your number: " + totalSum;
+            totalSum = addNumber01 + 50;
+            document.getElementById("AddNumber50Div").innerHTML = "<br />I've added 50(fifty) to your number: " + totalSum;
+            totalSum = addNumber01 + 1568;
+            document.getElementById("AddNumber1568Div").innerHTML = "<br />I've added 1568 to your number: " + totalSum;
+        </script>
+    </body>
+</html>
