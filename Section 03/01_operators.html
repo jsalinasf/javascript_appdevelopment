@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Operators</title>
+    </head>
+    <body>
+        <div id="numbers"></div>
+        <div id="sum"></div>
+        <div id="subtraction"></div>
+        <div id="multiplication"></div>
+        <div id="division"></div>
+        <div id="sumsumNumber"></div>
+        <div id="Numbersumsum"></div>
+        <div id="NumbersumsumNochange"></div>
+        <div id="remainder"></div>
+        <script>
+            var number01 = parseInt(prompt("Input Number 01: "));
+            var number02 = parseInt(prompt("Input Number 02: "))
+            var sumNumbers = number01 + number02;
+            var subtractionNumbers = number01 - number02;
+            var multiplyNumbers = number01 * number02;
+            var divideNumbers = number01 / number02;
+            var remainderNumber = number01 % number02;
+            document.getElementById("numbers").innerHTML = "Arithmetic Operators for: " + number01 + " and " + number02;
+            document.getElementById("sum").innerHTML = "Sum: " + sumNumbers;
+            document.getElementById("subtraction").innerHTML = "Subtraction: " + subtractionNumbers;
+            document.getElementById("multiplication").innerHTML = "Multiplication: " + multiplyNumbers;
+            document.getElementById("division").innerHTML = "Division: " + divideNumbers;
+            document.getElementById("sumsumNumber").innerHTML = "++ Number: " + ++number01;
+            document.getElementById("Numbersumsum").innerHTML = "Number ++ (POST PREFIX applies after evaluating the expression): " + number01++;
+            document.getElementById("NumbersumsumNochange").innerHTML = "That's Why we just see the increment in this line and not in the previous one: " + number01;
+            document.getElementById("remainder").innerHTML = "The remainder between number01 and number 02 is: " + remainderNumber;
+
+            /* Watch the following outcome using Developer Tools */
+            console.log (4 == 4);
+            console.log(4 === "4"); /* triple equals operator compares VALUE and TYPE*/
+            console.log( 4 > 4);
+            console.log( 3 < 27);
+            console.log( 4 >= 4);
+            console.log(3 <= 0);
+            console.log( 4!= 5 );
+        </script>
+
+    </body>
+    <footer><br />For more awesome projects like this visit <a href="https://www.frameworktv.com">FrameworkTV.com</a></footer>
+</html>
