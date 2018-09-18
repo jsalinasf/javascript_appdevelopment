@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SALINAS_Exercise3</title>
+    </head>
+    <body>
+        <div id="output"></div>
+
+        <script>
+            var operand1 = parseInt(prompt("Input operand #01: "));
+            var operand2 = parseInt(prompt("Input operand #02: "));
+            var result = "";
+
+            result = "Operand1 is: " + operand1 +  "<br />";
+            result += "Operand2 is: " + operand2 +  "<br />";
+            result += "What is the sum of Operand1 and Operand2? " + (operand1 + operand2) + "<br />";
+            result += "What is the result of you subtract Operand2 from Operand1? " + (operand1 - operand2) + "<br />";
+            result += "What is the result of multiply Operand1 by Operand2? " + (operand1 * operand2) + "<br />";
+            result += "Is Operand1 equal to Operand2? " + (operand1 == operand2) + "<br />";
+            result += "Is Operand1 smaller than Operand2? " + (operand1 <= operand2) + "<br />";
+            result += "Can you divide Operand2 evenly in to Operand1? " + remainder() + ", The remainder is: " + (operand1 % operand2);
+            
+            function remainder()
+            {
+                if ((operand1 % operand2) == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            document.getElementById("output").innerHTML = result;
+
+        </script>
+
+        <footer>
+            <p>For more awesome projects like this visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+        </footer>
+    </body>
+</html>
