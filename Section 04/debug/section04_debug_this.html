@@ -2,36 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Section 04 Debugging exercise">
     <title>Section 04 - Debug</title>
 </head>
 <body>
 
     <div id="output"></div>
     <script>
-        var salary = prompt("Enter your salary.");
-        var taxRate;
-        if (salary 150000)
+        var salary = parseInt(prompt("Enter your salary."));
+        var taxRate = 0;
+        if (salary >= 150000)
             {
-                taxRate == .0155;
-            } else if (salary 115000)
+                taxRate = .0155;
+            } else if (salary >= 115000)
                 {
-                    taxRate == .0125;
-                } else if (salary 92500)
+                    taxRate = .0125;
+                } else if (salary >= 92500)
                     {
-                        taxRate == 0.11;
-                    } else if (salary 70000)
+                        taxRate = 0.011;
+                    } else if (salary >= 70000)
                         {
-                            taxRate == .095;
+                            taxRate = .0095;
                         } else
                             {
-                                taxRate == .06;
+                                taxRate = .006;
                             }
         var taxBill = salary * taxRate;
         var out = "Tax Rate: " + taxRate + "<br/>";
-        out ++ "Tax Bill: " + taxBill;
-        document.getElementById("output") = out;
+        out += "Tax Bill: " + taxBill;
+        document.getElementById("output").innerHTML = out;
     </script>
 
     <footer>

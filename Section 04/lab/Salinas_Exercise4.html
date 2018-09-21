@@ -6,8 +6,54 @@
     <title>SALINAS_Exercise4</title>
 </head>
 <body>
+    <div id="output"></div>
+    <script>
+        var number01 = parseInt(prompt("Input number 01: "));
+        var number02 = parseInt(prompt("Input number 02: "));
+        var operationNumbers = prompt("Input your operation (+,-,*,/,%): ");
+        var total = 0;
+        var error = false;
+
+        switch (operationNumbers)
+        {
+            case "+":
+                total = number01 + number02;
+                break;
+
+            case "-":
+                total = number01 - number02;
+                break;
+
+            case "*":
+                total = number01 * number02;
+                break;
+
+            case "/":
+                total = number01 / number02;
+                break;
+            
+            case "%":
+                total = number01 % number02;
+                break;
+            
+            default:
+                total = "0";
+                error = true;
+        }
+
+        if (error == true)
+        {
+            document.getElementById("output").innerHTML = "Error: Wrong operation chosen by user";
+        } else 
+            {
+                document.getElementById("output").innerHTML = number01 + " " + operationNumbers + " " + number02 + " = " + total;
+            }     
+    
+    </script>
+    
     <footer>
         <p>For more awesome projects like this please visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
     </footer>
+
 </body>
 </html>
