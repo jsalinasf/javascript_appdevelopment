@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>If Else Block</title>
+</head>
+<body>
+    <!-- IF ELSE Block-->
+    
+    <div id="output"></div>
+
+    <script>
+        var grade = 73;
+        var letterGrade = "";
+        if (grade >= 97)
+        {
+            letterGrade = "A+";
+        } else if (grade >= 93)
+            {
+                letterGrade = "A";
+            } else if (grade >= 90)
+                {
+                    letterGrade = "A-";
+                } else if (grade >= 87)
+                    {
+                        letterGrade = "B+";
+                    } else if (grade >= 83)
+                        {
+                            letterGrade = "B";
+                        } else if (grade >= 80)
+                            {
+                                letterGrade = "B-";
+                            } else if (grade >= 77)
+                                {
+                                    letterGrade = "C+";
+                                } else if (grade >= 73)
+                                    {
+                                        letterGrade = "C";
+                                    } else if (grade >= 70)
+                                        {
+                                            letterGrade = "C-";
+                                        }
+        document.getElementById("output").innerHTML = "<h2>Letter Grade: " + letterGrade + "</h2>"        
+    </script>
+
+    <footer>
+        <p>For more awesome projects like this visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+    </footer>    
+</body>
+</html>
