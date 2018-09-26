@@ -10,20 +10,20 @@
     <div id="output"></div>
 
     <script>
-        var counter = 0;
+        var counter = 100;
 
-        while (counter < 11)
+        while (counter >= 0)
         {
             document.getElementById("output").innerHTML += counter + " ";
-            counter++;
+            counter--;
         }
 
-        var x = 30;
+        var x = 0;
 
-        while (x != 0)
+        while (x <= 1000)
         {
             document.getElementById("output").innerHTML += "<br />X: " + x;
-            x = x - 5;
+            x = x + 10;
         }
 
     </script>
