@@ -2,11 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Javascript APP Development Loops - FrameworkTV.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SALINAS_Exercise5B</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Section 5 - Exercise B</h1>
+    </header>
+
+    <div id="output"></div>
+
+    <script>
+        var rows = parseInt(prompt("Input the number of Rows: "));
+        var columns = parseInt(prompt("Input the number of Columns: "))
+
+        for (i=0; i<rows; i++)
+        {
+            document.getElementById("output").innerHTML += "*".repeat(columns) + "<br />";
+        }
+
+    </script>
+
+    <footer>
+        <p>For more interesting tutorials like this visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+    </footer>    
 </body>
 </html>

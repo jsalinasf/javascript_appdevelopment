@@ -2,11 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Javascript APP Development Loops - FrameworkTV.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SALINAS_Exercise5A</title>
 </head>
 <body>
+    <header>
+        <h1>Section 5 - Exercise A</h1>
+    </header>
     
+    <div id="patter1"></div> <!-- To print patter 1 -->
+    <div id="patter2"></div> <!-- To print patter 2 -->
+
+    <script>
+        
+        for (i=1; i<21; i++) /* Print patter 1 */
+        {
+            document.getElementById("patter1").innerHTML += "*".repeat(10 - Math.abs((10 - i))) + "<br />";
+        }
+
+        var printChar = ""; /* var used for printing patter2 character */
+        j = 0; /* Var used for the While Loop - I just wanted to use a different loop here */
+
+        while (j<4)
+        {
+            document.getElementById("patter2").innerHTML += "<br />";
+            for (i=0; i<=10; i++) /* Print patter 2 */
+            {
+                if (i % 2 == 0)
+                {
+                    printChar = "*";
+                } else {
+                    printChar = "-";
+                }
+                document.getElementById("patter2").innerHTML += printChar;
+            }
+            j ++;
+        }
+
+    </script>
+
+    <footer>
+        <p>For more interesting tutorials like this visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+    </footer>
 </body>
 </html>
