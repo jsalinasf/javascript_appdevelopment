@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do While Loop</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+
+        /* the difference of the "DO WHILE" loop vs "WHILE" loop is
+        that it is guaranteed to run AT LEAST ONCE */
+
+        var counter = 100;
+        
+        do
+        {
+            document.getElementById("output").innerHTML += "<br />Counter: " + counter;
+            counter = counter -10;
+        } while (counter > -30);
+
+
+        var counter2 = -40;
+
+
+        
+        do
+        {
+            /* Check this out, how -40 is printed */
+            document.getElementById("output").innerHTML += "<br /><br />Counter: " + counter2;
+            counter2 = counter2 -10;
+        } while (counter2 > -30);
+
+
+
+    </script>
+    <footer>
+        <p>For more interesting tutorials like this please visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+    </footer>
+</body>
+</html>
