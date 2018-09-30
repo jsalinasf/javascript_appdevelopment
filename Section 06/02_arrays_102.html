@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Arrays 102</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var fruits = ["banana", "apple", "orange", "pineapple", "strawberry"];
+        var family = new Array("Dad","Mom","Sister","Brother","Pet");
+        document.getElementById("output").innerHTML = fruits[0];
+        document.getElementById("output").innerHTML += "<br />" + fruits[3];
+        document.getElementById("output").innerHTML += "<br />" + fruits;
+        document.getElementById("output").innerHTML += "<br />" + fruits.sort();
+        family.push("Dad's Girlfriend")
+        document.getElementById("output").innerHTML += "<br />" + family;
+        family.pop();
+        document.getElementById("output").innerHTML += "<br />" + family;
+    </script>
+    
+</body>
+</html>
