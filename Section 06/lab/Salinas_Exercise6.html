@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Javascript exercise to learn how to handle arrays in Javascript">
+        <title>SALINAS_Exercise6</title>
+    </head>
+    <body>
+        <h2>Salinas Exercise 6</h2>
+        <div id="output"></div>
+
+        <script>
+            var gpa = [];
+            var outstandingGpa = [];
+            var userInput = out = "";
+            var total = highest = 0;
+            var lowest = 100;
+            var aux=0;
+
+            do 
+            {
+                userInput = prompt("Input GPA: ");
+                if (userInput != "XXX")
+                {
+                    gpa.push(parseFloat(userInput));
+                }                
+            } while (userInput != "XXX")
+
+            /* A) The GPA’s in order from largest to smallest */
+            gpa.sort();
+            
+
+            for (i=0; i<gpa.length; i++)
+            {
+                /* B) The average of the GPA’s */
+                total += gpa[i];
+
+                /* C) The highest and lowest GPA for the class */
+                if (gpa[i] > highest)
+                {
+                    highest = gpa[i];
+                }
+                if (gpa[i] < lowest)
+                {
+                    lowest = gpa[i];
+                }
+
+                /* D) A list of the outstanding GPA’s (Defined as GPA’s over 3.4). */
+                if (gpa[i] >= 3.4)
+                {
+                    aux = gpa[i];
+                    outstandingGpa.push(aux);
+                }
+            }
+
+            out += "<br />" + "The Average of the GPA is: " + total/gpa.length;
+            out += "<br />" + "Here is the list of Outstanding GPAs (Greater that 3.4): " + outstandingGpa;
+            out += "<br />" + "The highest GPA is: " + highest;
+            out += "<br />" + "The lowest GPA is: " + lowest;
+            document.getElementById("output").innerHTML = out;
+
+        </script>
+        <footer>
+            <p>For more interesting tutorials like this visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+        </footer>
+    </body>
+
+</html>

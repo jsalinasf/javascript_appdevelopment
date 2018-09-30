@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tutorial to learn how to manage arrays in Javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript: Arrays 101</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+        }
+        footer {
+            background-color: black;
+            color: whitesmoke;
+            text-align: center;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h2>Javascript Arrays 101</h2>
+    <div id="output"></div>
+    
+    <script>
+        var family = ["Dad", "Mom", "Sister", "Brother", "Pet"];
+        document.getElementById("output").innerHTML = family[0];
+        document.getElementById("output").innerHTML += "<br />" + family[1];
+        document.getElementById("output").innerHTML += "<br />" + family[2];
+        document.getElementById("output").innerHTML += "<br />" + family[3];
+        document.getElementById("output").innerHTML += "<br />" + family[4];
+        
+        /* This prints the whole array */
+        document.getElementById("output").innerHTML += "<br /><br />" + family;
+        
+        /* The following lines throw an error, it is made on purpose so I can see what happens */
+        document.getElementById("output").innerHTML += "<br /><br />" + family[5];
+
+        /* Now I'm going to change an array member using its index*/
+        family[0] = "Mike";
+        document.getElementById("output").innerHTML += "<br /><br />" + family;
+
+        /* Now I'm going to ADD a new member to the array*/
+        /* This method to ADD is not efficient neither effective it is just to show the option*/
+        family[5] = "Laura";
+        document.getElementById("output").innerHTML += "<br /><br />" + family + "<br />";
+
+        /* Now let access the array members using a loop */
+        var out = "";
+        for (i=0; i<family.length; i++)
+        {
+            out += family[i];
+            out += "<br />";
+        }
+        document.getElementById("output").innerHTML += out;
+
+        document.getElementById("output").innerHTML += "<br /> Array Members Count: " + family.length;
+        
+        /* Now let's sort the Array */
+        family.sort();
+
+        document.getElementById("output").innerHTML += "<br />".repeat(2);
+        document.getElementById("output").innerHTML += "Sorted Array: <br />";
+        
+        out = "";
+        for (i=0; i<family.length; i++)
+        {
+            out += family[i];
+            out += "<br />";
+        }
+        document.getElementById("output").innerHTML += out;
+
+        /* Now I'm going to ADD a new member to the array using an ARRAY METHOD*/
+
+        document.getElementById("output").innerHTML += "<br />".repeat(2);
+        document.getElementById("output").innerHTML += "New Member added: <br />";
+
+        family.push("Girlfriend");
+
+        out = "";
+        for (i=0; i<family.length; i++)
+        {
+            out += family[i];
+            out += "<br />";
+        }
+
+        document.getElementById("output").innerHTML += out;
+
+        /* Mom killed the Girlfriend so we need to remove her from the array*/
+
+        document.getElementById("output").innerHTML += "<br />".repeat(2);
+        document.getElementById("output").innerHTML += "Last Member removed: <br />";
+
+        family.pop()
+
+                out = "";
+        for (i=0; i<family.length; i++)
+        {
+            out += family[i];
+            out += "<br />";
+        }
+
+        document.getElementById("output").innerHTML += out;
+
+    </script>
+    
+    <footer>
+        <p>For more interesting tutorials like this please visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+    </footer>
+</body>
+</html>
