@@ -10,12 +10,17 @@
         <div id="output"></div>
 
         <script>
+
             var gpa = [];
             var outstandingGpa = [];
             var userInput = out = "";
             var total = highest = 0;
             var lowest = 100;
             var aux=0;
+
+            function compareNumbers(a, b){
+                return b - a;
+            }
 
             do 
             {
@@ -57,6 +62,7 @@
             out += "<br />" + "Here is the list of Outstanding GPAs (Greater that 3.4): " + outstandingGpa;
             out += "<br />" + "The highest GPA is: " + highest;
             out += "<br />" + "The lowest GPA is: " + lowest;
+            out += "<br />" + "Here is the list of GPAs from largest to smallest: " + gpa.sort(compareNumbers);
             document.getElementById("output").innerHTML = out;
 
         </script>
