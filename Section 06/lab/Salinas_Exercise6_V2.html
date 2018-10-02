@@ -17,6 +17,14 @@
             var total = highest = 0;
             var lowest = 100;
             var aux=0;
+            
+            
+            function compareNumbers(a, b){
+
+                /* Used to calculate the output Largest to Smallest*/
+
+                return b - a;
+            }
 
             do 
             {
@@ -58,6 +66,10 @@
             out += "<br />" + "Here is the list of Outstanding GPAs (Greater that 3.4): " + outstandingGpa;
             out += "<br />" + "The highest GPA is: " + highest;
             out += "<br />" + "The lowest GPA is: " + lowest;
+            
+            /* V2 of the file because V1 missed the following output, noted by Jonah*/
+            out += "<br />" + "Here is the list of GPAs from largest to smallest: " + gpa.sort(compareNumbers);
+            
             document.getElementById("output").innerHTML = out;
 
         </script>
