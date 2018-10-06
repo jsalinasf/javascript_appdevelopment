@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Class 101</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        out ="";
+        
+        var realState = {};
+
+        //Properties
+        realState.price = 150000;
+        realState.zipCode = 48380;
+        realState.size = 600;
+        realState.rooms = 2;
+        realState.parkings = 2;
+
+        //Method
+        realState.buyProperty = function()
+        {
+            alert("A Property as been bought!");
+        }
+        realState.publishProperty = function()
+        {
+            alert("New Property has been published!");
+        }
+        realState.sellProperty = function ()
+        {
+            alert("A new property is being sold!");
+        }
+
+        out = "Price: " + realState.price
+        out += "<br />Zip Code: " + realState.zipCode
+        out += "<br />Size (squared Ft): " + realState.size;
+        out += "<br />Rooms: " + realState.rooms;
+        out += "<br />Parkings: " + realState.parkings;
+        document.getElementById("output").innerHTML = out;
+
+        realState.publishProperty();
+        realState.buyProperty();
+        realState.sellProperty();
+
+    </script>
+    <footer>
+        <p>For more interesting tutorials like this please visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Section 07 Debug This</title>
+    <script src="animal.js"></script>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        var myDog = new Animal("mammal", "54", "black", true, 70, "bark");
+
+        out = "<br />Type: " + myDog.type;
+        out += "<br />Weight: " + myDog.weight;
+        out += "<br />Color: " + myDog.color;
+        out += "<br />Fur: " + myDog.fur;
+        out += "<br />Length: " + myDog.length;
+        document.getElementById('output').innerHTML = out;
+        myDog.makeSound();
+        myDog.breathe();
+
+        var mySheep = new Animal("mammal", 124, "White", true, 42, "beeeee");
+
+        out += "<br />Type: " + mySheep.type;
+        out += "<br />Weight: " + mySheep.weight;
+        out += "<br />Color: " + mySheep.color;
+        out += "<br />Fur: " + mySheep.fur;
+        out += "<br />Length: " + mySheep.length;
+        document.getElementById('output').innerHTML = out;
+        mySheep.makeSound();
+        mySheep.breathe();
+    </script>
+
+</body>
+<footer>
+    <p>For more interesting tutorials like this please visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+</footer>
+
+</html>
