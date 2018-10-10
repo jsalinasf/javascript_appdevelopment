@@ -1,0 +1,36 @@
+#grid {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+td {
+    text-align: center;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
+
+#flex-container01 {
+    width: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#flex-container02 {
+    width: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#flex-container03 {
+    width: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
