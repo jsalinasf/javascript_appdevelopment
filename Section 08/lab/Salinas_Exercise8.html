@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Salinas Lab 8</title>
+</head>
+<body>
+    <div id="out"></div>
+    <script>
+        let number01 = parseInt(prompt('Input Number 01: '));
+        let number02 = parseInt(prompt('Input Number 02: '));
+        const OPERATION = prompt('Input your operation +,-,*,/,%: ');
+
+        showResult(number01, number02, OPERATION);
+
+        function showResult(n1,n2,OP) {
+            let output = '';
+            let total = 0;
+            switch (OP) 
+            {
+                case "+" :
+                    total = n1 + n2;
+                    output = n1 + OP + n2 + ' = ' + total;
+                    break;
+                
+                case "-" :
+                    total = n1 - n2;
+                    output = n1 + OP + n2 + ' = ' + total;
+                    break;
+                
+                case "*" :
+                    total = n1 * n2;
+                    output = n1 + OP + n2 + ' = ' + total;
+                    break;
+
+                case "/" :
+                    total = n1 / n2;
+                    output = n1 + OP + n2 + ' = ' + total;
+                    break;
+                
+                case "%" :
+                    total = n1 % n2;
+                    output = n1 + OP + n2 + ' = ' + total;
+                    break;
+
+                default:
+                    output = 'Not valid operation';
+            }
+            document.getElementById('out').innerHTML = output;
+        }
+
+    </script>
+    
+</body>
+</html>
