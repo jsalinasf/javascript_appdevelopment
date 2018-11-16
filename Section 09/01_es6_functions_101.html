@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ES6 Javascript functions"
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 JavaScript Functions</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+
+        // Lambda Functions
+        let greetings = (name) => ("Greetings " + name);
+        document.getElementById('output').innerHTML = greetings('Henry');
+
+        /*
+        // Function Constructor
+        let greetings = new Function('name','return ("Greetings " + name + "!")');
+        document.getElementById('output').innerHTML = greetings('Valerie');
+        */
+
+        /*
+        // Anonymous Functions
+        let greetings = function(name) {return ('Greetings ' + name + '!')};
+        document.getElementById('output').innerHTML = greetings('Michael');
+        */
+
+        /*
+        // Rest Parameters
+        // Let us pass any number of parameters of our functions
+
+        function output(...params) {
+            document.getElementById('output').innerHTML = params.length;
+        }
+        
+        // output('Lois','Mark','Sarah',2050);
+        output(1.8, 2.3, 4.5, 'Francis', 23.50, 1);
+        */
+
+        /*
+        // Function with "Default" Parameters (check current year)
+        function userAge(yearOfBirth, currentYear = 2018) {
+            let age = currentYear - yearOfBirth;
+            return age;
+        }
+
+        document.getElementById('output').innerHTML = userAge(2008);
+        //document.getElementById('output').innerHTML = userAge(1986, 2000);
+        */
+        
+        /*
+        // Function that return some value
+        function greetings(userName) {
+            let message = '<h1>Greetings ' + userName + '!</h1>';
+            return message;
+        }
+
+        var myMessage = greetings('Lupe');
+
+        document.getElementById('output').innerHTML = myMessage;
+        */
+
+        /*
+        // Standard function with parameter
+        function greetings(userName) {
+            let message = '<h1>Greetings ' + userName + '!</h1>';
+            document.getElementById('output').innerHTML = message;
+        }
+    
+        // Function call
+        greetings('Joseph');
+        */
+    
+    </script>
+    <footer>
+        <p>For more interesting tutorials like this visit: <a href="https://www.frameworktv.com">FrameworkTV.com</a></p>
+    </footer>    
+</body>
+</html>
