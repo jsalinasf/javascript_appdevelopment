@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>JavaScript - Salinas - Section 09</title>
 </head>
 <body>
-    
+    <div id="output"></div>
+    <script>
+        function addTodos(tasks) {
+            for (i = 0; i < tasks.length; i++) {
+                document.getElementById('output').innerHTML += tasks[i];
+            }
+        }
+
+        let todo = () => (document.getElementById('output').innerHTML = '<h1>TO-DO:</h1>');           
+        todo();
+
+        toDoList = ['<p>Wash the car</p>','<p>Cook dinner</p>','<p>Children soccer practice</p>','<p>Fix Garage Door</p>','<p>Walk the dog</p>','<p>Shelve the snow</p>','<p>Doctor\'s appointment</p>'];
+        addTodos(toDoList);    
+
+    </script>
 </body>
 </html>
