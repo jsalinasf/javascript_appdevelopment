@@ -1,15 +1,23 @@
-<div id="output"></div>
-<script>
-let addParagraphs = function(params) {
-for(i=1; i < params.length; i++){
-document.getElementById("output").innerHTML +=
-params;
-}
-};
-addParagraphs(
-"Welcome",
-"We're very glad to have you in this course. ",
-45,
-"<p>Feel free to ask us any question!</p>"
-);
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Section 9 - Debug Exercise</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        let addParagraphs = function(...params) {
+            for(i = 0; i < params.length; i++) {
+                document.getElementById("output").innerHTML += params[i];
+            }
+        };
+        addParagraphs("<h1>Welcome</h1>", "<p>We're very glad to have you in this course.</p>", "<p>Feel free to ask us any question!</p>");
+    </script>
+    <footer>
+        <p>For more interesting tutorials like this visit: <a href="https://www.frameworktv.com">FrameworkTV</a></p>
+    </footer>    
+</body>
+</html>
