@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 Functions</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        // Anonymous Function
+        let greetingAnonymous = function(name) {return 'Hello ' + name};
+
+        // Function Contructor
+        let greetingConstructor = new Function('name', "return ('Hello ' + name)");
+
+        // Arrow Function
+        let greetingArrow = (name) => {return 'Hello ' + name};
+
+
+
+        alert(greetingAnonymous('Jorge'));
+        alert(greetingConstructor('Ale'));
+        alert(greetingArrow('Kadenchis'));
+
+    </script>
+    
+</body>
+</html>
