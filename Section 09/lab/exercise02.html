@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Section 09 - ES6 Functions</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        toDoList = ['Go to the Gym','Buy groceries','Pick up new Tv', 'Finish Airplane model', 'MTB Bike ride'];
+
+        let todo = (myHeader) => {document.getElementById('output').innerHTML = '<h1>' + myHeader + '</h1>'};
+        
+        let addToDos = function(myList) {
+            let printMessage = '';
+            for (i=0; i<myList.length; i++) {
+                printMessage += '<p>' + myList[i] + '</p>';
+            }
+            document.getElementById('output').innerHTML += printMessage;
+        }
+
+        todo('TO-DO:');
+        addToDos(toDoList);
+
+    </script>
+    
+</body>
+</html>
