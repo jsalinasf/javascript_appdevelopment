@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>JavaScript - Salinas - Section 10</title>
 </head>
 <body>
-    
+    <div id='container'>
+        <header>
+            <h1>Whack-a-Doo Tasks</h1>
+        </header>
+        <div id='gui'>
+            
+            <label for='camper'>Name: </label>
+            <input type='text' name='camper' id='camper'>
+            
+            <label for='chores'>Chores: </label>
+            <input name='chores' list='choresList' id='chores'>
+            <datalist id='choresList'>
+                <option value='Front Room Sweep'>
+                <option value='Back Room Sweep'>
+                <option value='Outside Grounds'>
+                <option value='Clean Toilet'>
+                <option value='Clean Sink'>
+                <option value='Trash Patrol and Supplies'>
+            </datalist>
+            <input type='submit' value='Assign Chore' id='assignChore'>
+            <br>
+            <br>
+            <input type='submit' value='List Chores' id='listChores'>            
+            
+            <!-- div used to print the MAP which stores Campers name and chores -->
+            <div id="output"></div>
+        </div>        
+        <script>
+            // GUI buttons stored on variables to be easily referenced later
+            const ADDBUTTON = document.getElementById('assignChore');
+            const LISTBUTTON = document.getElementById('listChores');
+            
+            // Map to store Camper's Name and his assigned Chore
+            let mapChores = new Map();
+            
+            // Assign Chore to Camper and save it on MAP
+            ADDBUTTON.onclick = function() {
+                const camperName = document.getElementById('camper');
+                const camperChore = document.getElementById('chores');
+                mapChores.set(camperChore.value, camperName.value);
+                camperName.value = '';
+                camperChore.value = '';
+            };
+
+            // Print Map information to assigned div
+            LISTBUTTON.onclick = function() {
+                let out = '';
+                for (let r of mapChores.entries()) {
+                    out += r[0] + ': ' + r[1];
+                    out += '<br/>';
+                }
+                document.getElementById('output').innerHTML = out;
+            };
+        </script>        
+        <footer>
+            <p>For more tutorials like this please visit: <a href='https://www.frameworktv.com'>FrameworkTV</a></p>
+        </footer>    
+    </div> <!-- div container -->
 </body>
 </html>
