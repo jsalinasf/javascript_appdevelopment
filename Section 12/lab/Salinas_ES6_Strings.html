@@ -11,50 +11,57 @@
 <body>
     <div id="container">
         <h1>ES6 Strings Lab</h1>
-        <form action="#">
-            <label for="pieceClothing">A Piece of Clothing:</label>
-            <input type="text" name="pieceClothing" id="pieceClothing">
-            <br />
-            <label for="partOfBody1">Part of Body (1):</label>
-            <input type="text" name="partOfBody1" id="partOfBody1">
-            <br />
-            <label for="partOfBody2">Part of Body (2):</label>
-            <input type="text" name="partOfBody2" id="partOfBody2">
-            <br />
-            <label for="verbBaseForm1">Verb Base Form (1):</label>
-            <input type="text" name="verbBaseForm1" id="verbBaseForm1">
-            <br />
-            <label for="partOfBody3">Part of Body (3):</label>
-            <input type="text" name="partOfBody3" id="partOfBody3">
-            <br />
-            <label for="verbBaseForm2">Verb Base Form (2):</label>
-            <input type="text" name="verbBaseForm2" id="verbBaseForm2">
-            <br />
-            <label for="nounPlural1">Noun Plural (1):</label>
-            <input type="text" name="nounPlural1" id="nounPlural1">
-            <br />
-            <label for="nounPlural2">Noun Plural (2):</label>
-            <input type="text" name="nounPlural2" id="nounPlural2">
-            <br>
-            <label for="verbBaseForm3">Verb Base Form (3):</label>
-            <input type="text" name="verbBaseForm3" id="verbBaseForm3">
-            <br>
-            <input type="submit" value="Generate Instructions" id="generateInstructions">
-        </form>
+        <label for="pieceClothing">A Piece of Clothing:</label>
+        <input type="text" name="pieceClothing" id="pieceClothing">
+        <br />
+        <label for="partOfBody1">Part of Body (1):</label>
+        <input type="text" name="partOfBody1" id="partOfBody1">
+        <br />
+        <label for="partOfBody2">Part of Body (2):</label>
+        <input type="text" name="partOfBody2" id="partOfBody2">
+        <br />
+        <label for="verbBaseForm1">Verb Base Form (1):</label>
+        <input type="text" name="verbBaseForm1" id="verbBaseForm1">
+        <br />
+        <label for="partOfBody3">Part of Body (3):</label>
+        <input type="text" name="partOfBody3" id="partOfBody3">
+        <br />
+        <label for="verbBaseForm2">Verb Base Form (2):</label>
+        <input type="text" name="verbBaseForm2" id="verbBaseForm2">
+        <br />
+        <label for="nounPlural1">Noun Plural (1):</label>
+        <input type="text" name="nounPlural1" id="nounPlural1">
+        <br />
+        <label for="nounPlural2">Noun Plural (2):</label>
+        <input type="text" name="nounPlural2" id="nounPlural2">
+        <br>
+        <label for="verbBaseForm3">Verb Base Form (3):</label>
+        <input type="text" name="verbBaseForm3" id="verbBaseForm3">
+        <br>
+        <input type="submit" value="Generate Instructions" id="generateInstructions">
         <div id="lyrics"></div>
         <script>
             const BTN_INSTRUCTIONS = document.getElementById('generateInstructions');
-            const varA = document.getElementById('');
-            const varB = document.getElementById('');
-            const varC = document.getElementById('');
-            const varD = document.getElementById('');
-            const varE = document.getElementById('');
-            const varF = document.getElementById('');
-            const varG = document.getElementById('');
-            const varH = document.getElementById('');
-            const varI = document.getElementById('');
+            const varA = document.getElementById('pieceClothing');
+            const varB = document.getElementById('partOfBody1');
+            const varC = document.getElementById('partOfBody2');
+            const varD = document.getElementById('verbBaseForm1');
+            const varE = document.getElementById('partOfBody3');
+            const varF = document.getElementById('verbBaseForm2');
+            const varG = document.getElementById('nounPlural1');
+            const varH = document.getElementById('nounPlural2');
+            const varI = document.getElementById('verbBaseForm3');
+            
             BTN_INSTRUCTIONS.onclick = function () {
-                let output = 'Hey Coco';
+                let output = `1 ) Put on some music`;
+                output += `<br/>2 ) Put on a ${varA.value} ( optional )`;
+                output += `<br/>3 ) Stand with your ${varB.value} ever so slightly bent`;
+                output += `<br/>4 ) Put your hands in fists`;  
+                output += `<br/>5 ) Place your ${varC.value}, relaxed, at the side of your body`;  
+                output += `<br/>6 ) Begin to ${varD.value} your ${varE.value} left and right around your torso in the opposite direction to your hips`;  
+                output += `<br/>7 ) Keep doing it and increase speed and ${varF.value} ${varG.value} occasionally for effect
+After building confidence, you can also ${varH.value} ${varI.value} with your arms if desired, but this is not mandatory.`;
+                // console.log(output);
                 document.getElementById('lyrics').innerHTML = output;
             }
         </script>
