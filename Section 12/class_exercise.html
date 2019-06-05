@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 Strings</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        // Ojo aqui estamos usando el BACK TILT `
+        let poem = `Rose are red
+Violets are blue
+You love Soccer
+and so I do`
+        // El Salto de Linea solo se respeta en la consola y si se almacena el string en base de datos
+        console.log(poem);
+        // En HTML, no se respetan los saltos de linea
+        document.getElementById('output').innerHTML = poem;
+    
+    // Templating
+    let student = {
+        firstName: 'Charles',
+        lastName: 'Xavier',
+        position: 'X-Men Leader',
+        location: 'USA',
+        age: '58'
+    };
+
+    let fullName = student.firstName + ' ' + student.lastName;
+
+    console.log(`The student name is ${fullName}`);
+    console.log(`The student lives in ${student.location} and is ${student.age} years old`);
+
+    document.getElementById('output').innerHTML += `<br/> ${fullName}, ${student.location}`;
+    
+    </script>
+    
+</body>
+</html>
