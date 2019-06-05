@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript - Salinas - Section 12</title>
 </head>
+
 <body>
-    <h1>ES6 Strings Lab</h1>
-    <form action="#">
-        <label for="pieceClothing">A Piece of Clothing:</label>
-        <input type="text" name="pieceClothing" id="pieceClothing">
-        <br/>
-        <label for="partOfBody1">Part of Body (1):</label>
-        <input type="text" name="partOfBody1" id="partOfBody1">
-        <br/>
-        <label for="partOfBody2">Part of Body (2):</label>
-        <input type="text" name="partOfBody2" id="partOfBody2">
-        <br/>
-        <label for="verbBaseForm1">Verb Base Form (1):</label>
-        <input type="text" name="verbBaseForm1" id="verbBaseForm1">
-        <br/>
-        <label for="partOfBody3">Part of Body (3):</label>
-        <input type="text" name="partOfBody3" id="partOfBody3">
-        <br/>
-        <label for="verbBaseForm2">Verb Base Form (2):</label>
-        <input type="text" name="verbBaseForm2" id="verbBaseForm2">
-        <br />
-        <label for="nounPlural1">Noun Plural (1):</label>
-        <input type="text" name="nounPlural1" id="nounPlural1">
-        <br/>
-        <label for="nounPlural2">Noun Plural (2):</label>
-        <input type="text" name="nounPlural2" id="nounPlural2">
-        <br>
-        <label for="verbBaseForm3">Verb Base Form (3):</label>
-        <input type="text" name="verbBaseForm3" id="verbBaseForm3">
-    </form>
-    
-    <footer>
-        <p>For more tutorials like this, please visit: <a href="https://www.frameworktv.com">FrameworkTV</a></p>
-    </footer>
+    <div id="container">
+        <h1>ES6 Strings Lab</h1>
+        <form action="#">
+            <label for="pieceClothing">A Piece of Clothing:</label>
+            <input type="text" name="pieceClothing" id="pieceClothing">
+            <br />
+            <label for="partOfBody1">Part of Body (1):</label>
+            <input type="text" name="partOfBody1" id="partOfBody1">
+            <br />
+            <label for="partOfBody2">Part of Body (2):</label>
+            <input type="text" name="partOfBody2" id="partOfBody2">
+            <br />
+            <label for="verbBaseForm1">Verb Base Form (1):</label>
+            <input type="text" name="verbBaseForm1" id="verbBaseForm1">
+            <br />
+            <label for="partOfBody3">Part of Body (3):</label>
+            <input type="text" name="partOfBody3" id="partOfBody3">
+            <br />
+            <label for="verbBaseForm2">Verb Base Form (2):</label>
+            <input type="text" name="verbBaseForm2" id="verbBaseForm2">
+            <br />
+            <label for="nounPlural1">Noun Plural (1):</label>
+            <input type="text" name="nounPlural1" id="nounPlural1">
+            <br />
+            <label for="nounPlural2">Noun Plural (2):</label>
+            <input type="text" name="nounPlural2" id="nounPlural2">
+            <br>
+            <label for="verbBaseForm3">Verb Base Form (3):</label>
+            <input type="text" name="verbBaseForm3" id="verbBaseForm3">
+            <br>
+            <input type="submit" value="Generate Instructions" id="generateInstructions">
+        </form>
+        <div id="lyrics"></div>
+        <script>
+            const BTN_INSTRUCTIONS = document.getElementById('generateInstructions');
+            const varA = document.getElementById('');
+            const varB = document.getElementById('');
+            const varC = document.getElementById('');
+            const varD = document.getElementById('');
+            const varE = document.getElementById('');
+            const varF = document.getElementById('');
+            const varG = document.getElementById('');
+            const varH = document.getElementById('');
+            const varI = document.getElementById('');
+            BTN_INSTRUCTIONS.onclick = function () {
+                let output = 'Hey Coco';
+                document.getElementById('lyrics').innerHTML = output;
+            }
+        </script>
+        <footer>
+            <p>For more tutorials like this, please visit: <a href="https://www.frameworktv.com">FrameworkTV</a></p>
+        </footer>
+    </div>
 </body>
+
 </html>
