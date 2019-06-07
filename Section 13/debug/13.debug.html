@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Section 13 - Destructuring JSON</title>
+</head>
+<body>
+    <script>
+        let catalog =  {
+            "artists": [
+            { "name":"Journey",
+                "hits":[ "Faithfully", 
+                        "Only the Young", 
+                        "Dont Stop Believing" ] },
+            { "name":"REO Speedwagon",
+                "hits":[ "Keep On Loving You", 
+                        "Time for Me to Fly", 
+                        "Cant Fight This Feeling" ] },
+            { "name":"Styx",
+                "hits":[ "Come Sail Away", 
+                        "Mr. Roboto",
+                        "Blue Collar Man"] }
+            ]
+            };
+        let { hits } = catalog.artists[2];
+        for(x in hits){
+            console.log(hits[x]);
+        }
+        </script>
+    
+</body>
+</html>

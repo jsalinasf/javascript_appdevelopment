@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript - Salinas - Section 13</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }        
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>ES6 JSON and Destructuring Lab</h1>
+        </header>
+        <div id="output">
+            <table id="printData">
+                <thead>
+                    <tr>
+                        <th>First</th>
+                        <th>Last</th>
+                        <th>Date of Birth</th>
+                        <th>Native</th>
+                        <th>Fluent</th>
+                        <th>Intermediate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be added from JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            <p>For more tutorials like this please visit: <a href="https://www.frameworktv.com">FrameworkTV</a></p>
+        </footer>
+    </div>
+
+    <script>
+        var userList = {
+            "people": [{
+                    firstName: "Fred",
+                    lastName: "Smith",
+                    dateOfBirth: 1980,
+                    spokenLanguages: {
+                        native: "English",
+                        fluent: "Spanish",
+                        intermediate: "Chinese"
+                    }
+                },
+                {
+                    firstName: "Monica",
+                    lastName: "Taylor",
+                    dateOfBirth: 1975,
+                    spokenLanguages: {
+                        native: "Spanish",
+                        fluent: "English",
+                        intermediate: "French"
+                    }
+                },
+                {
+                    firstName: "Maurice",
+                    lastName: "Edelson",
+                    dateOfBirth: 1992,
+                    spokenLanguages: {
+                        native: "English",
+                        fluent: "Spanish",
+                    }
+                },
+                {
+                    firstName: "Kelly",
+                    lastName: "Lang",
+                    dateOfBirth: 1982,
+                    spokenLanguages: {
+                        native: "English",
+                        fluent: "German",
+                        intermediate: "Dutch"
+                    }
+                }
+            ]
+        };
+
+        const PEOPLE_TABLE = document.getElementById('printData');
+
+        for (let individual of userList.people) {
+            let {firstName, lastName, dateOfBirth} = individual;
+            let {native, fluent, intermediate} = individual.spokenLanguages;
+            var row = PEOPLE_TABLE.insertRow(1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+            cell1.innerHTML = firstName;
+            cell2.innerHTML = lastName;
+            cell3.innerHTML = dateOfBirth;
+            cell4.innerHTML = native;
+            cell5.innerHTML = fluent;
+            cell6.innerHTML = intermediate;    
+        };
+    </script>
+</body>
+</html>
