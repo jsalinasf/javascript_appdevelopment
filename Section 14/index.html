@@ -7,6 +7,12 @@
   <title>JavaScript Classes</title>
 </head>
 <body>
-  
+  <div id="printMessage"></div>
+  <script src="Employee.js"></script>
+  <script>
+    let scott = new Employee('Scott','Smith','09-7865-0989','accountant',120.50)
+    document.getElementById('printMessage').innerHTML = `${scott._firstName} ${scott._lastName} ${scott._active}`
+    console.log(scott);
+  </script>  
 </body>
 </html>
