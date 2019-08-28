@@ -9,7 +9,7 @@ class PTEmployee extends Employee {
   // Methods
   info () {
     if (this._active) {
-      const info = `${this._firstName} ${this._lastName} ${this._social} ${this._jobTitle} ${this._salary} ${this._hoursPerWeek}`; 
+      const info = `${this._firstName} ${this._lastName}, ${this._social}, ${this._jobTitle}, $${this._salary} per hour, ${this._hoursPerWeek} hours a week`; 
       return info;
     } else {
       const info = `Part Time Employee is not active`
