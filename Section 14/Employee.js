@@ -17,7 +17,7 @@ class Employee {
 
   info() {
     if (this._active) {
-      const info = `${this._firstName} ${this._lastName}`;
+      const info = `${this._firstName} ${this._lastName} ${this._social} ${this._jobTitle} ${this._salary};
       return info;
     } else {
       const info = 'Employee is not active';
