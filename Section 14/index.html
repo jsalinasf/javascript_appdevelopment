@@ -12,8 +12,8 @@
   <script>
     let scott = new Employee('Scott','Smith','09-7865-0989','accountant',120.50)
     let rupert = new Employee('Rupert','Park','02-8787-7790','IT Support',320)
-    document.getElementById('printMessage').innerHTML = `${scott._firstName} ${scott._lastName} ${scott._active} <br/>`
-    document.getElementById('printMessage').innerHTML += `${rupert._firstName} ${rupert._lastName} ${rupert._active}`
+    document.getElementById('printMessage').innerHTML = scott.info() + '<br/>'
+    document.getElementById('printMessage').innerHTML += rupert.info()
     console.log(scott);
     console.log(rupert);
   </script>  

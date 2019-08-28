@@ -8,4 +8,21 @@ class Employee {
     this._salary = salary;
     this._active = true;  // default value
   }
+  
+  // Methods
+  
+  fire() {
+    this._active = false;
+  }
+
+  info() {
+    if (this._active) {
+      const info = `${this._firstName} ${this._lastName}`;
+      return info;
+    } else {
+      const info = 'Employee is not active';
+      return info;
+    }
+  }
+
 }
