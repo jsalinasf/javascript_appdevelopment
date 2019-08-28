@@ -10,7 +10,7 @@ class Employee {
   }
   
   // Methods
-  
+
   fire() {
     this._active = false;
   }
@@ -25,4 +25,15 @@ class Employee {
     }
   }
 
+  get salary() {
+    return this._salary;
+  }
+
+  set salary(newSalary) {
+    if (newSalary > 0) {
+      this._salary = newSalary;
+    } else {
+      alert('Salary must be greater than zero');
+    }
+  }
 }

@@ -11,9 +11,13 @@
   <script src="Employee.js"></script>
   <script src="PTEmployee.js"></script>
   <script>
-    let scott = new Employee('Scott','Smith','09-7865-0989','accountant',36.50)
+    let scott = new Employee('Scott','Smith','09-7865-0989','accountant',18.50)
     let rupert = new Employee('Rupert','Park','02-8787-7790','sales',15.50)
-    document.getElementById('printMessage').innerHTML = scott.info() + '<br/>'
+    document.getElementById('printMessage').innerHTML += scott.info() + '<br/>'
+    scott.salary = 10;
+    document.getElementById('printMessage').innerHTML += scott.info() + '<br/>'
+    scott.salary = 0;
+    document.getElementById('printMessage').innerHTML += scott.info() + '(note that salary didn\'t change to Zero)' + '<br/>'
     document.getElementById('printMessage').innerHTML += rupert.info() + '<br/>'
     scott.fire();
     document.getElementById('printMessage').innerHTML += scott.info() + '<br/>'
@@ -21,6 +25,7 @@
     document.getElementById('printMessage').innerHTML += mike.info() + '<br/>'
     mike.fire();
     document.getElementById('printMessage').innerHTML += mike.info() + '<br/>'
+
   </script>  
 </body>
 </html>
