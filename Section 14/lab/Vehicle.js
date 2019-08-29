@@ -2,22 +2,24 @@
 class Vehicle {
 
   // constructor
-  constructor(color, direction, currentSpeed, topSpeed, engineStarted = false) {
+  constructor(color, topSpeed, direction = 0, currentSpeed = 0, engineStarted = false) {
     this._color = color;
-    this._direction = direction;
-    this._currentSpeed = currentSpeed;
     this._topSpeed = topSpeed;
+    this._direction = direction;
+    this._currentSpeed = currentSpeed;    
     this._engineStarted = engineStarted;
-    this._incrementSpeed = 10; // km per hour
+    this._incrementSpeed = 40; // km per hour
+    this._incrementDirection = 15; // degrees
   }
 
   // methods
   accelerate() {
     if (this._engineStarted) {
-      if ((this._currentSpeed + increment) >= this._topSpeed) {
+      if ((this._currentSpeed + this._incrementSpeed) > this._topSpeed) {
         this._currentSpeed = this._topSpeed;
+        alert('Vehicle has reached top speed');
       } else {
-        this._currentSpeed += increment;
+        this._currentSpeed += this._incrementSpeed;
       }
     } else {
       alert('Please turn on Vehicle first');
@@ -27,9 +29,10 @@ class Vehicle {
   break() {
     if (this._engineStarted) {
       if (this._currentSpeed > 0) {
-        this._currentSpeed -= increment;
+        this._currentSpeed -= this._incrementSpeed;
+        if (this._currentSpeed < 0) this._currentSpeed = 0;
       } else {
-        alert('Current vehicle\'s speed is zero, please gain some speed first before breaking')
+        alert('The current speed of the vehicle is zero, please gain some speed first before breaking')
       }
     } else {
       alert('Please turn on Vehicle first');
@@ -45,11 +48,11 @@ class Vehicle {
   }
 
   turnLeft() {
-
+    this.direction += this._incrementDirection;
   }
 
   turnRight() {
-
+    this.direction -= this._incrementDirection;
   }
 
   set direction(newDirection) {
