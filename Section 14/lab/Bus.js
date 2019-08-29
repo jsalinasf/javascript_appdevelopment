@@ -7,5 +7,15 @@ class Bus extends Vehicle {
   }
 
   // methods
+  get seats() {
+    return this._seats;
+  }
+  set seats(newSeats) {
+    if (newSeats > 0) {
+      this._seats = newSeats;
+    } else {
+      alert('Bus seats mut be greater than zero')
+    }
+  }
 
 }

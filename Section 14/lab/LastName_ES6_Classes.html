@@ -12,16 +12,21 @@
   <script src="Ambulance.js"></script>
   
   <script>
-    let vehicle01 = new Vehicle('red',100);
+    let vehicle01 = new Vehicle('red', 200);
     vehicle01.turnOn();
     vehicle01.accelerate();
     vehicle01.turnLeft();
     console.log(vehicle01);
-    let bus01 = new Bus('red',80,35);
+    
+    let bus01 = new Bus('red',80);
     bus01.turnOn();
     bus01.accelerate();
     bus01.turnLeft();
+    bus01.seats = 0;
     console.log(bus01);
+
+    let ambulance01 = new Ambulance('gray', 120)
+    console.log(ambulance01);
   </script>
   
 </body>
