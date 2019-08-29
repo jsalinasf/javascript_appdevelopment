@@ -7,6 +7,13 @@ class Bus extends Vehicle {
   }
 
   // methods
+
+  // overriding parent class method
+  info() {
+    const info = `Color: ${this._color} - Current Speed: ${this._currentSpeed}MPH - Top Speed: ${this._topSpeed}MPH - Direction: ${this._direction} - Engine Started: ${this._engineStarted} - Seats: ${this._seats}`;
+    return info;
+  }
+  
   get seats() {
     return this._seats;
   }
@@ -14,7 +21,7 @@ class Bus extends Vehicle {
     if (newSeats > 0) {
       this._seats = newSeats;
     } else {
-      alert('Bus seats mut be greater than zero')
+      console.log('Bus seats mut be greater than zero')
     }
   }
 
