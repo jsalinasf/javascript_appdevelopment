@@ -8,8 +8,8 @@ class Vehicle {
     this._direction = direction;
     this._currentSpeed = currentSpeed;    
     this._engineStarted = engineStarted;
-    this._incrementSpeed = 40; // km per hour
-    this._incrementDirection = 15; // degrees
+    this._incrementSpeed = 30; // miles per hour
+    this._incrementDirection = 45; // degrees
   }
 
   // methods
@@ -57,18 +57,18 @@ class Vehicle {
   }
 
   turnLeft() {
-    this.direction += this._incrementDirection;
+    this.direction = this._direction + this._incrementDirection;
   }
 
   turnRight() {
-    this.direction -= this._incrementDirection;
+    this.direction = this._direction - this._incrementDirection;
   }
 
   set direction(newDirection) {
     if (newDirection >=0 && newDirection < 360) {
       this._direction = newDirection
     } else {
-      alert('Please correct direction input')
+      alert('You can\'t turn any further in this direction');
     }
   }
 
