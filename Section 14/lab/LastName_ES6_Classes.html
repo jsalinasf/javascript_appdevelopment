@@ -8,12 +8,18 @@
 </head>
 <body>
 
-  <div class="container" style="width:90%; margin:auto; display:flex; justify-content: space-between;">
-    <div id="instanceClass01" style="padding: 0 10px;" >
-      <h2 style="margin:0;">Instance Class: Vehicle 01</h2>
+  <div class="container" style="width:90%; margin:auto; display:flex; justify-content: space-between; flex-flow: wrap;">
+    <div id="instanceVehicle01" style="padding: 0 10px; flex-grow: 1; flex: 1 1 40%;">
+      <h2 style="margin-bottom:10px;">Vehicle 01:</h2>
     </div>
-    <div id="instanceClass02" style="padding: 0 10px;">
-      <h2 style="margin:0;">Instance Class: Vehicle 02</h2>
+    <div id="instanceVehicle02" style="padding: 0 10px; flex-grow: 1; flex: 1 1 40%;">
+      <h2 style="margin-bottom:10px;">Vehicle 02:</h2>
+    </div>
+    <div id="instanceBus01" style="padding: 0 10px; flex-grow: 1; flex: 1 1 40%;">
+      <h2 style="margin-bottom:10px;">Bus 01:</h2>
+    </div>
+    <div id="instanceAmbulance01" style="padding: 0 10px; flex-grow: 1; flex: 1 1 40%;">
+      <h2 style="margin-bottom:10px;">Ambulance 01:</h2>
     </div>
   </div>
 
@@ -22,42 +28,61 @@
   <script src="Ambulance.js"></script>
   
   <script>
-    let vehicle01 = new Vehicle('red',200);
-    document.getElementById('instanceClass01').innerHTML += vehicle01.info();
-    document.getElementById('instanceClass01').innerHTML += '<br /> <br />method turnOn()'
-    vehicle01.turnOn();
-    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
-    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method accelerate()'
-    vehicle01.accelerate();
-    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
-    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method accelerate()'
-    vehicle01.accelerate();
-    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
-    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method break()'
-    vehicle01.break();
-    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
-    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method turnLeft()'
-    vehicle01.turnLeft();
-    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
-    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method turnLeft()'
-    vehicle01.turnLeft();
-    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
-    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method turnRight()'
-    vehicle01.turnRight();
-    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
-    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method turnOff()'
-    vehicle01.break();
-    vehicle01.turnOff();
-    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
+    let vehicle01 = new Vehicle('red',150);
+    document.getElementById('instanceVehicle01').innerHTML += 'Instancing Class Vehicle:'
+    document.getElementById('instanceVehicle01').innerHTML += '<br />' + vehicle01.info();    
+    document.getElementById('instanceVehicle01').innerHTML += '<br /> Turning on. ' + vehicle01.turnOn();
+    document.getElementById('instanceVehicle01').innerHTML += '<br /> Accelerating. ' + vehicle01.accelerate();
+    document.getElementById('instanceVehicle01').innerHTML += '<br /> Accelerating. ' + vehicle01.accelerate();
+    document.getElementById('instanceVehicle01').innerHTML += '<br /> Accelerating. ' + vehicle01.accelerate();
+    document.getElementById('instanceVehicle01').innerHTML += '<br /> Accelerating. ' + vehicle01.accelerate();    
+    document.getElementById('instanceVehicle01').innerHTML += '<br /> Breaking. ' + vehicle01.break();
+    document.getElementById('instanceVehicle01').innerHTML += '<br /> Breaking. ' + vehicle01.break();
+    document.getElementById('instanceVehicle01').innerHTML += '<br /> Breaking. ' + vehicle01.break();
+    document.getElementById('instanceVehicle01').innerHTML += '<br /> Breaking. ' + vehicle01.break();
+    document.getElementById('instanceVehicle01').innerHTML += '<br /> Turning off. ' + vehicle01.turnOff();
+
+    let vehicle02 = new Vehicle('green',200);
+    document.getElementById('instanceVehicle02').innerHTML += 'Instancing Class Vehicle:'
+    document.getElementById('instanceVehicle02').innerHTML += '<br />' + vehicle02.info();    
+    document.getElementById('instanceVehicle02').innerHTML += '<br /> Turning on. ' + vehicle02.turnOn();
+    document.getElementById('instanceVehicle02').innerHTML += '<br /> Accelerating. ' + vehicle02.accelerate();
+    document.getElementById('instanceVehicle02').innerHTML += '<br /> Turning left. ' + vehicle02.turnLeft();
+    document.getElementById('instanceVehicle02').innerHTML += '<br /> Turning left. ' + vehicle02.turnLeft();
+    document.getElementById('instanceVehicle02').innerHTML += '<br /> Turning right. ' + vehicle02.turnRight();
+    document.getElementById('instanceVehicle02').innerHTML += '<br /> Breaking. ' + vehicle02.break();
+    document.getElementById('instanceVehicle02').innerHTML += '<br /> Turning off. ' + vehicle02.turnOff();
+
+    let bus01 = new Bus('black',80);
+    bus01.seats = 100;
+    document.getElementById('instanceBus01').innerHTML += 'Instancing Class Vehicle:'
+    document.getElementById('instanceBus01').innerHTML += '<br />' + bus01.info();    
+    document.getElementById('instanceBus01').innerHTML += '<br /> Turning on. ' + bus01.turnOn();
+    document.getElementById('instanceBus01').innerHTML += '<br /> Accelerating. ' + bus01.accelerate();
+    document.getElementById('instanceBus01').innerHTML += '<br /> Accelerating. ' + bus01.accelerate();
+    document.getElementById('instanceBus01').innerHTML += '<br /> Accelerating. ' + bus01.accelerate();
+    document.getElementById('instanceBus01').innerHTML += '<br /> Accelerating. ' + bus01.accelerate();    
+    document.getElementById('instanceBus01').innerHTML += '<br /> Breaking. ' + bus01.break();
+    document.getElementById('instanceBus01').innerHTML += '<br /> Breaking. ' + bus01.break();
+    document.getElementById('instanceBus01').innerHTML += '<br /> Breaking. ' + bus01.break();
+    document.getElementById('instanceBus01').innerHTML += '<br /> Breaking. ' + bus01.break();
+    document.getElementById('instanceBus01').innerHTML += '<br /> Turning off. ' + bus01.turnOff();
+
+    let ambulance01 = new Ambulance('white',100);
+    bus01.seats = 100;
+    document.getElementById('instanceAmbulance01').innerHTML += 'Instancing Class Vehicle:'
+    document.getElementById('instanceAmbulance01').innerHTML += '<br />' + ambulance01.info();    
+    document.getElementById('instanceAmbulance01').innerHTML += '<br /> Turning on. ' + ambulance01.turnOn();
+    document.getElementById('instanceAmbulance01').innerHTML += '<br /> Accelerating. ' + ambulance01.accelerate();
+    document.getElementById('instanceAmbulance01').innerHTML += '<br /> Accelerating. ' + ambulance01.accelerate();
+    document.getElementById('instanceAmbulance01').innerHTML += '<br /> Accelerating. ' + ambulance01.accelerate();
+    document.getElementById('instanceAmbulance01').innerHTML += '<br /> Accelerating. ' + ambulance01.accelerate();    
+    document.getElementById('instanceAmbulance01').innerHTML += '<br /> Breaking. ' + ambulance01.break();
+    document.getElementById('instanceAmbulance01').innerHTML += '<br /> Breaking. ' + ambulance01.break();
+    document.getElementById('instanceAmbulance01').innerHTML += '<br /> Breaking. ' + ambulance01.break();
+    document.getElementById('instanceAmbulance01').innerHTML += '<br /> Breaking. ' + ambulance01.break();
+    document.getElementById('instanceAmbulance01').innerHTML += '<br /> Turning off. ' + ambulance01.turnOff();
     
-    let vehicle02 = new Vehicle('green',150);
-    document.getElementById('instanceClass02').innerHTML += vehicle02.info();
-    document.getElementById('instanceClass02').innerHTML += '<br /> <br />method turnOn()'
-    vehicle02.turnOn();
-    document.getElementById('instanceClass02').innerHTML += '<br />' + vehicle02.info();
-    document.getElementById('instanceClass02').innerHTML += '<br /> <br />method turnOff()'
-    vehicle02.turnOff();
-    document.getElementById('instanceClass02').innerHTML += '<br />' + vehicle02.info();
   </script>
   
 </body>

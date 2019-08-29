@@ -17,12 +17,13 @@ class Vehicle {
     if (this._engineStarted) {
       if ((this._currentSpeed + this._incrementSpeed) > this._topSpeed) {
         this._currentSpeed = this._topSpeed;
-        alert('Vehicle has reached top speed');
+        return `Current speed is: ${this._currentSpeed} MPH <span style="color:red">(Top speed has been reached)</span>`
       } else {
         this._currentSpeed += this._incrementSpeed;
+        return `Current speed is: ${this._currentSpeed} MPH`
       }
     } else {
-      alert('Please turn on Vehicle first');
+      return `<p style="color:red;">Please turn on vehicle first before Accelerating.</p>`
     }
   }
 
@@ -30,9 +31,13 @@ class Vehicle {
     if (this._engineStarted) {
       if (this._currentSpeed > 0) {
         this._currentSpeed -= this._incrementSpeed;
-        if (this._currentSpeed < 0) this._currentSpeed = 0;
+        if (this._currentSpeed <= 0) {
+          this._currentSpeed = 0;
+          return `Current speed is: ${this._currentSpeed} MPH <span style="color:red">(Vehicle has completely stopped)</span> `
+        }
+        return `Current speed is: ${this._currentSpeed} MPH`
       } else {
-        alert('The current speed of the vehicle is zero, please gain some speed first before breaking')
+        return `Current speed is: ${this._currentSpeed} MPH <span style="color:blue;">(Vehicle is already stopped, please gain some speed first before breaking)</span>`;
       }
     } else {
       alert('Please turn on Vehicle first');
@@ -42,26 +47,32 @@ class Vehicle {
   turnOn() {
     if (!this._engineStarted) {
       this._engineStarted = true;
+      return `Engine Started: ${this._engineStarted}`
     } else {
-      alert('Vehicle is already turned on');
+      return `<span style="color:red;">Vehicle is already turned on</span>`;
     }    
   }
 
   turnOff() {
-    if (this._currentSpeed === 0) {
+    if (this._currentSpeed === 0 && this._engineStarted == true) {
       this._engineStarted = false;
+      return `Engine Started: ${this._engineStarted}`
+    } else if (this._currentSpeed > 0) {
+      return `<span style="color:red;">Please stop Vehicle completely before turning it off</span>`
     } else {
-      alert('Stop the vehicle before turning it off')
+      return `<span style="color:red;">Vehicle is already turned off</span>`;
     }
     
   }
 
   turnLeft() {
     this.direction = this._direction + this._incrementDirection;
+    return `New direction is: ${this._direction} degrees`;
   }
 
   turnRight() {
     this.direction = this._direction - this._incrementDirection;
+    return `New direction is: ${this._direction} degrees`;
   }
 
   info() {
@@ -73,7 +84,7 @@ class Vehicle {
     if (newDirection >=0 && newDirection < 360) {
       this._direction = newDirection
     } else {
-      alert('You can\'t turn any further in this direction');
+      console.log('You can\'t turn any further in this direction');
     }
   }
 
