@@ -2,7 +2,7 @@
 class Vehicle {
 
   // constructor
-  constructor(color, topSpeed, direction = 0, currentSpeed = 0, engineStarted = false) {
+  constructor(color, topSpeed, direction=0, currentSpeed=0, engineStarted=false) {
     this._color = color;
     this._topSpeed = topSpeed;
     this._direction = direction;

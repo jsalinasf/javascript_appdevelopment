@@ -13,25 +13,15 @@
   
   <script>
     let vehicle01 = new Vehicle('red',100);
-    console.log(vehicle01);
     vehicle01.turnOn();
     vehicle01.accelerate();
+    vehicle01.turnLeft();
     console.log(vehicle01);
-    
-    vehicle01.turnLeft();
-    vehicle01.turnLeft();
-    vehicle01.turnLeft();
-    vehicle01.turnRight();
-
-    // vehicle01.turnLeft();
-
-    //vehicle01.direction = 500;
-    // vehicle01.turnLeft();
-    // vehicle01.turnLeft();
-    // vehicle01.turnLeft();
-    console.log(vehicle01);
-
-
+    let bus01 = new Bus('red',80,35);
+    bus01.turnOn();
+    bus01.accelerate();
+    bus01.turnLeft();
+    console.log(bus01);
   </script>
   
 </body>
