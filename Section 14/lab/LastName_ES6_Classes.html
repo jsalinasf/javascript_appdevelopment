@@ -8,14 +8,13 @@
 </head>
 <body>
 
-  <div class="container" style="padding: 20px;">
-    <div id="instanceClass01" style="float:left;">
-      <h1>Instance Class: Vehicle 01</h1>
+  <div class="container" style="width:90%; margin:auto; display:flex; justify-content: space-between;">
+    <div id="instanceClass01" style="padding: 0 10px;" >
+      <h2 style="margin:0;">Instance Class: Vehicle 01</h2>
     </div>
-    <div id="instanceClass02" style="float:right;">
-      <h1>Instance Class: Vehicle 02</h1>
+    <div id="instanceClass02" style="padding: 0 10px;">
+      <h2 style="margin:0;">Instance Class: Vehicle 02</h2>
     </div>
-    <div style="clear: both;"></div>
   </div>
 
   <script src="Vehicle.js"></script>
@@ -24,7 +23,7 @@
   
   <script>
     let vehicle01 = new Vehicle('red',200);
-    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
+    document.getElementById('instanceClass01').innerHTML += vehicle01.info();
     document.getElementById('instanceClass01').innerHTML += '<br /> <br />method turnOn()'
     vehicle01.turnOn();
     document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
@@ -52,7 +51,7 @@
     document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
     
     let vehicle02 = new Vehicle('green',150);
-    document.getElementById('instanceClass02').innerHTML += '<br />' + vehicle02.info();
+    document.getElementById('instanceClass02').innerHTML += vehicle02.info();
     document.getElementById('instanceClass02').innerHTML += '<br /> <br />method turnOn()'
     vehicle02.turnOn();
     document.getElementById('instanceClass02').innerHTML += '<br />' + vehicle02.info();
