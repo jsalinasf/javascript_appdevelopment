@@ -40,11 +40,20 @@ class Vehicle {
   }
 
   turnOn() {
-    this._engineStarted = true;
+    if (!this._engineStarted) {
+      this._engineStarted = true;
+    } else {
+      alert('Vehicle is already turned on');
+    }    
   }
 
   turnOff() {
-    this._engineStarted = false;
+    if (this._currentSpeed === 0) {
+      this._engineStarted = false;
+    } else {
+      alert('Stop the vehicle before turning it off')
+    }
+    
   }
 
   turnLeft() {
