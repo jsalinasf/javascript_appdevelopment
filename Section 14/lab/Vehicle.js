@@ -17,10 +17,10 @@ class Vehicle {
     if (this._engineStarted) {
       if ((this._currentSpeed + this._incrementSpeed) > this._topSpeed) {
         this._currentSpeed = this._topSpeed;
-        return `Current speed is: ${this._currentSpeed} MPH <span style="color:red">(Top speed has been reached)</span>`
+        return `Speed is: ${this._currentSpeed} MPH <span style="color:red">(Top speed has been reached)</span>`
       } else {
         this._currentSpeed += this._incrementSpeed;
-        return `Current speed is: ${this._currentSpeed} MPH`
+        return `Speed is: ${this._currentSpeed} MPH`
       }
     } else {
       return `<p style="color:red;">Please turn on vehicle first before Accelerating.</p>`
@@ -33,11 +33,11 @@ class Vehicle {
         this._currentSpeed -= this._incrementSpeed;
         if (this._currentSpeed <= 0) {
           this._currentSpeed = 0;
-          return `Current speed is: ${this._currentSpeed} MPH <span style="color:red">(Vehicle has completely stopped)</span> `
+          return `Speed is: ${this._currentSpeed} MPH <span style="color:red">(Vehicle has completely stopped)</span> `
         }
-        return `Current speed is: ${this._currentSpeed} MPH`
+        return `Speed is: ${this._currentSpeed} MPH`
       } else {
-        return `Current speed is: ${this._currentSpeed} MPH <span style="color:blue;">(Vehicle is already stopped, please gain some speed first before breaking)</span>`;
+        return `Speed is: ${this._currentSpeed} MPH <span style="color:blue;">(Vehicle is already stopped, please gain some speed first before breaking)</span>`;
       }
     } else {
       alert('Please turn on Vehicle first');
