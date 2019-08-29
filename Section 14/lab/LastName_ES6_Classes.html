@@ -7,26 +7,58 @@
   <title>Salinas - ES6 Classes</title>
 </head>
 <body>
+
+  <div class="container" style="padding: 20px;">
+    <div id="instanceClass01" style="float:left;">
+      <h1>Instance Class: Vehicle 01</h1>
+    </div>
+    <div id="instanceClass02" style="float:right;">
+      <h1>Instance Class: Vehicle 02</h1>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
   <script src="Vehicle.js"></script>
   <script src="Bus.js"></script>
   <script src="Ambulance.js"></script>
   
   <script>
-    let vehicle01 = new Vehicle('red', 200);
+    let vehicle01 = new Vehicle('red',200);
+    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
+    document.getElementById('instanceClass01').innerHTML += '<br /> <br />method turnOn()'
     vehicle01.turnOn();
+    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
+    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method accelerate()'
     vehicle01.accelerate();
+    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
+    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method accelerate()'
+    vehicle01.accelerate();
+    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
+    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method break()'
+    vehicle01.break();
+    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
+    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method turnLeft()'
     vehicle01.turnLeft();
-    console.log(vehicle01);
+    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
+    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method turnLeft()'
+    vehicle01.turnLeft();
+    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
+    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method turnRight()'
+    vehicle01.turnRight();
+    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
+    document.getElementById('instanceClass01').innerHTML += '<br /> <br /> method turnOff()'
+    vehicle01.break();
+    vehicle01.turnOff();
+    document.getElementById('instanceClass01').innerHTML += '<br />' + vehicle01.info();
     
-    let bus01 = new Bus('red',80);
-    bus01.turnOn();
-    bus01.accelerate();
-    bus01.turnLeft();
-    bus01.seats = 0;
-    console.log(bus01);
-
-    let ambulance01 = new Ambulance('gray', 120)
-    console.log(ambulance01);
+    let vehicle02 = new Vehicle('green',150);
+    document.getElementById('instanceClass02').innerHTML += '<br />' + vehicle02.info();
+    document.getElementById('instanceClass02').innerHTML += '<br /> <br />method turnOn()'
+    vehicle02.turnOn();
+    document.getElementById('instanceClass02').innerHTML += '<br />' + vehicle02.info();
+    document.getElementById('instanceClass02').innerHTML += '<br /> <br />method turnOff()'
+    vehicle02.turnOff();
+    document.getElementById('instanceClass02').innerHTML += '<br />' + vehicle02.info();
   </script>
   
 </body>

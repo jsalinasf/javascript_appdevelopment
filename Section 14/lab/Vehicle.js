@@ -64,6 +64,11 @@ class Vehicle {
     this.direction = this._direction - this._incrementDirection;
   }
 
+  info() {
+    const info = `Color: ${this._color} - Current Speed: ${this._currentSpeed}MPH - Top Speed: ${this._topSpeed}MPH - Direction: ${this._direction} - Engine Started: ${this._engineStarted}`;
+    return info;
+  }
+
   set direction(newDirection) {
     if (newDirection >=0 && newDirection < 360) {
       this._direction = newDirection
