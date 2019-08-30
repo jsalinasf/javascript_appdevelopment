@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JavaScript Promises</title>
 </head>
+
 <body>
+  <!-- <script>
+    console.log('1');
+    setTimeout(function(){console.log('2');},3000);
+    console.log('3');
+    setTimeout(function(){console.log('4');},1000)
+    </script> -->
+
+  <div id="image-holder"></div>
   
+  <script>
+    var img = null;
+    let imgPromise = new Promise(function (resolve, reject) {
+      img = new Image();
+      img.addEventListener('load', resolve(img));
+      img.addEventListener('error', reject('Could not load image'));
+      img.src = "http://thecatapi.com/api/images/get?format=src&type=jpg&size=small";
+    });
+    imgPromise.then(function (fromResolve) {
+      console.log('The image has loaded. Yay!');
+      let node = document.getElementById('image-holder');
+      node.appendChild(img);
+    }).catch(function (fromReject) {
+      console.log(fromReject);
+    })
+  </script>
+
 </body>
+
 </html>
