@@ -9,10 +9,12 @@ class Ambulance extends Vehicle {
   // methods
   sirensOn() {
     this._sirens = true;
+    return '<span style="color: red; font-weight: bolder;">Sirens On</span>';
   }
 
   sirensOff() {
     this._sirens = false;
+    return '<span style="color: #01B629; font-weight: bolder;">Sirens Off</span>';
   }
 
 }
