@@ -59,6 +59,8 @@
       let height = document.getElementById('height').value;
       let grayscale = document.getElementById('grayscale').checked;
 
+      document.getElementById('image-holder').innerHTML = "";
+
       var img = null;
 
       let imgPromise = new Promise(function (resolve, reject) {
@@ -76,7 +78,7 @@
       }).catch(function (fromReject) {
         console.log(fromReject);
       });
-      
+
     }
   </script>
 </body>
