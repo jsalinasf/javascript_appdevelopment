@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    label {
+      display: inline-block;
+      width: 80px;
+    }
+  </style>
+  <title>Salinas - ES6 Promises</title>
+</head>
+<body>
+  <h1>Picture Getter</h1>
+  <fieldset>
+    <legend>Preferences</legend>
+    <div>
+        <label for="width">Width (px): </label>
+        <input type="number" name="width" id="width" min="100" max="3840" value="200">
+    </div>
+    <div>
+      <label for="Height">Height (px): </label>
+      <input type="number" name="width" id="width" min="100" max="2160" value="300">
+    </div>
+    <div>
+      <label for="grayscale">Grayscale: </label>
+      <input type="checkbox" id="grayscale" name="grayscale" id="grayscale">
+    </div>
+    <br />
+    <input type="button" value="Get Pic">
+    <div class="image-holder"></div>  
+  </fieldset>
+</body>
+</html>
