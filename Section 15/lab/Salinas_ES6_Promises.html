@@ -10,14 +10,17 @@
       display: inline-block;
       width: 80px;
     }
-    img {
-      border: 1px solid #000;
-    }
     #clickButton {
       margin: 20px 0;
     }
     #image-holder {
       margin: 20px 0;
+      width: 100%;
+    }
+    #image-holder img {
+      border: 1px solid #000; 
+      display: block;
+      margin: 5px auto;
     }
   </style>
   <title>Salinas - ES6 Promises</title>
@@ -62,7 +65,8 @@
         img = new Image;
         img.addEventListener('load', resolve(img));
         img.addEventListener('error', reject('Could not load image'));
-        img.src = "https://picsum.photos/200/300/?random"
+        let myUrl = (grayscale) ? `https://picsum.photos/${width}/${height}?grayscale` : `https://picsum.photos/${width}/${height}`;
+        img.src = myUrl; 
       });
 
       imgPromise.then(function (fromResolve) {
@@ -72,6 +76,7 @@
       }).catch(function (fromReject) {
         console.log(fromReject);
       });
+      
     }
   </script>
 </body>
