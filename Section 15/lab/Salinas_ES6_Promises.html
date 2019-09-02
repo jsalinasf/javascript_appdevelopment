@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,26 @@
       display: inline-block;
       width: 80px;
     }
+    img {
+      border: 1px solid #000;
+    }
+    #clickButton {
+      margin: 20px 0;
+    }
+    #image-holder {
+      margin: 20px 0;
+    }
   </style>
   <title>Salinas - ES6 Promises</title>
 </head>
+
 <body>
   <h1>Picture Getter</h1>
   <fieldset>
     <legend>Preferences</legend>
     <div>
-        <label for="width">Width (px): </label>
-        <input type="number" name="width" id="width" min="100" max="3840" value="200">
+      <label for="width">Width (px): </label>
+      <input type="number" name="width" id="width" min="100" max="3840" value="200">
     </div>
     <div>
       <label for="height">Height (px): </label>
@@ -28,18 +39,41 @@
       <label for="grayscale">Grayscale: </label>
       <input type="checkbox" id="grayscale" name="grayscale" id="grayscale">
     </div>
-    <br />
-    <input type="button" value="Get Pic" onclick="getPicture()">
-    <div class="image-holder"></div>
-
-    <script>
-      const getPicture = () => {
-        let width = document.getElementById('width').value;
-        let height = document.getElementById('height').value;
-        let grayscale = document.getElementById('grayscale').checked;
-      }
-    </script>
-
+    <div id="clickButton">
+      <input type="button" value="Get Pic" onclick="getPicture()">
+    </div>    
   </fieldset>
+  
+  <div id="image-holder"></div>
+
+  <footer>
+    For more exercises like this please visit: <a href="https://www.frameworktv.com">FrameworkTV</a>
+  </footer>
+
+  <script>
+    const getPicture = () => {
+      let width = document.getElementById('width').value;
+      let height = document.getElementById('height').value;
+      let grayscale = document.getElementById('grayscale').checked;
+
+      var img = null;
+
+      let imgPromise = new Promise(function (resolve, reject) {
+        img = new Image;
+        img.addEventListener('load', resolve(img));
+        img.addEventListener('error', reject('Could not load image'));
+        img.src = "https://picsum.photos/200/300/?random"
+      });
+
+      imgPromise.then(function (fromResolve) {
+        console.log('The image has been loaded');
+        let node = document.getElementById('image-holder');
+        node.appendChild(img);
+      }).catch(function (fromReject) {
+        console.log(fromReject);
+      });
+    }
+  </script>
 </body>
+
 </html>
